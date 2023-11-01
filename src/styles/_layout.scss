@@ -1,0 +1,146 @@
+body {
+  background-color: $color-bg-gray;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  margin: 30px 50px;
+
+  &__container {
+    max-width: 500px;
+    text-align: left;
+    background-color: $color-white;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+  }
+
+  &__header {
+    padding: 16px 16px;
+  }
+
+  &__body {
+    border-top: 1px solid $color-lightgray;
+    padding: 16px 16px 30px 16px;
+  }
+
+  &__title {
+    font-size: $text-xl;
+    font-weight: $weight-semibold;
+    line-height: 38px;
+  }
+
+  &__subtitle {
+    font-size: $text-base;
+    font-weight: $weight-regular;
+    line-height: 24px;
+    color: $color-text-gray;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+
+  &__group {
+    position: relative;
+  }
+
+  &__label {
+    font-size: $text-base;
+    color: $color-black;
+  }
+
+  &__field {
+    width: 100%;
+    padding: 10px;
+    font-size: $text-base;
+    font-weight: $weight-regular;
+    color: $color-black;
+    background-color: $color-bg-gray;
+    border: 1px solid $color-lightgray;
+    border-radius: 5px;
+
+    &::placeholder {
+      color: $color-text-gray-blue;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.submit-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 60px;
+  font-size: $text-lg;
+  font-weight: $weight-semibold;
+  color: $color-white;
+  background-color: $color-green;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-green-hover;
+  }
+
+  &:active {
+    background-color: $color-green-active;
+  }
+}
+
+.error {
+  position: absolute;
+  top: 100%;
+  margin-top: 1px;
+  font-size: $text-sm;
+  color: $color-red;
+
+  &-border {
+    border-color: $color-red;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-form {
+    margin: 0;
+
+    &__title {
+      font-size: $text-lg;
+      font-weight: $weight-semibold;
+      line-height: 24px;
+    }
+
+    &__subtitle {
+      font-size: $text-sm;
+      font-weight: $weight-regular;
+      line-height: 20px;
+    }
+  }
+
+  .form {
+    row-gap: 20px;
+
+    &__field,
+    &__label {
+      font-size: $text-sm;
+    }
+  }
+
+  .submit-button {
+    padding: 10px 40px;
+    font-size: $text-base;
+  }
+
+  .error {
+    font-size: $text-xs;
+  }
+}

@@ -1,0 +1,29 @@
+//font-sizes
+$text-xs: 12px;
+$text-sm: 14px;
+$text-base: 15px;
+$text-lg: 18px;
+$text-xl: 28px;
+
+//font-weights
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+
+//colors
+$color-white: rgb(255, 255, 255); //bg
+$color-black: rgb(0, 0, 0);
+$color-lightgray: rgb(204, 208, 213); //input border
+
+$color-bg-gray: rgb(245, 246, 247); //body bg, input field color
+
+$color-text-gray: rgb(96, 103, 112); //subtitle
+$color-text-gray-blue: rgb(141, 148, 158); //field text
+
+$color-green: rgb(0, 164, 0); //btn
+$color-green-hover: rgba(0, 164, 0, 0.8); //hover
+$color-green-active: rgba(0, 164, 0, 0.5); //active
+$color-red: rgb(255, 0, 0);
+
+//effects
+$box-shadow: -5px 5px 20px -5px rgb(211, 211, 211);
