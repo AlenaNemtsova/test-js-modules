@@ -10,7 +10,6 @@ emailInput.addEventListener('input', emailInputHandler);
 phoneInput.addEventListener('input', phoneInputHandler);
 commentInput.addEventListener('input', commentInputHandler);
 
-// handlers
 function nameInputHandler(e) {
     removeError(e.target.nextSibling);
     validateTextField(e);
@@ -31,6 +30,5 @@ function commentInputHandler(e) {
     validateTextField(e);
 }
 
-// submission
 form.addEventListener('submit', handleSubmit);
 btn.addEventListener('click', handleSubmit);
