@@ -21,25 +21,25 @@ export async function handleSubmit(e) {
     }
     console.log(application);
 
-    return await fetch('/api/registration',
-        {
-            method: 'POST',
-            body: JSON.stringify(application),
-            headers: {
-                'Content-Type': 'multipart/form-data',
-            }
-        })
-        .then(res => res.json())
-        .then((res) => {
-            console.log(res.status, res.msg);
+    try {
+        const response = await fetch('/api/registration',
+            {
+                method: 'POST',
+                body: JSON.stringify(application),
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8',
+                }
+            });
+        const data = response.status;
+        console.log(data);
 
-            if (res.status === 200) {
-                alert(`${res.msg}`);
-                form.reset();
-            }
-        })
-        .then(data => {
-            console.log(data);
-        })
-        .catch(error => console.log(error));
+        if (response.status === 200) {
+            alert(`${response.status}`);
+            form.reset();
+        }
+        return data
+
+    } catch (e) {
+        console.log(e);
+    }
 }
